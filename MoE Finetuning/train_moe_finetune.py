@@ -362,18 +362,16 @@ if __name__ == '__main__':
     # Expert data directories -- each must contain train/ and val/ subfolders
     # with 0_real/ and 1_fake/ subdirectories (ImageFolder layout)
     parser.add_argument('--data_dm_dir', type=str,
-                        default='/data3/law/data/FF++/dm',
+                        default='/datasets/dm',
                         help='Data directory for DM expert')
     parser.add_argument('--data_gan_dir', type=str,
-                        default='/data3/law/data/FF++/gan',
+                        default='/datasets/gan',
                         help='Data directory for GAN expert')
 
     # Expert model checkpoint paths
     parser.add_argument('--expert_dm_path', type=str,
-                        default='aurora dm [2,4,6,8] alpha4/trainmodel_params_best_0.9998auc1.0000epoch001.pkl',
                         help='Path to DM expert checkpoint')
     parser.add_argument('--expert_gan_path', type=str,
-                        default='aurora gan [2,4,6,8] alpha4/trainmodel_params_best_1.0000auc1.0000epoch001.pkl',
                         help='Path to GAN expert checkpoint')
 
     # MoE model arguments
